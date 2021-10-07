@@ -4,21 +4,17 @@ import {
   Switch,
   Route
 } from "react-router-dom";
-import {Navbar} from '../components/ui/Navbar'
 import {LoginScreen} from '../components/login/LoginScreen'
-import { MarvelScreen } from '../components/marvel/MarvelScreen'
+import { DashBoardRoutes } from "./DashboardRoutes";
+// import { MarvelScreen } from '../components/marvel/MarvelScreen'
 
 export const AppRouter = () => {
     return (
         <Router>
         <div>
-          <Navbar/>
-  
-          {/* A <Switch> looks through its children <Route>s and
-              renders the first one that matches the current URL. */}
           <Switch>
             <Route exact path = "/login" component = {LoginScreen}/>
-            <Route exact path = "/" component = {MarvelScreen}/>
+            <Route path = "/" component = {DashBoardRoutes}/>
           </Switch>
         </div>
       </Router>

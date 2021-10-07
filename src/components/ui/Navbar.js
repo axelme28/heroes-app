@@ -1,9 +1,11 @@
 import React from 'react'
 import { Link, NavLink } from 'react-router-dom'
 
+// import './navbar.css'
+
 export const Navbar = () => {
     return (
-        <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
+        <nav className="navbar navbar-expand-sm navbar-dark bg-dark p-3">
             
             <Link 
                 className="navbar-brand" 
@@ -35,8 +37,8 @@ export const Navbar = () => {
                 </div>
             </div>
 
-            <div className="navbar-collapse collapse w-100 order-3 dual-collapse2">
-                <ul className="navbar-nav ml-50">
+            <div className="ml-2">
+                <ul className="navbar-nav ">
                     <NavLink 
                         activeClassName="active"
                         className="nav-item nav-link" 

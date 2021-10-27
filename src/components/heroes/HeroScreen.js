@@ -6,10 +6,9 @@ import { getHeroesById } from '../../selectors/getHeroesById';
 export const HeroScreen = ({history}) => {
 
     const {heroId} = useParams()
-    console.log(heroId);
+
 
     const hero = getHeroesById(heroId);
-    console.log(hero);
 
     if (!hero) {
         return <Redirect to = "/"/>
@@ -40,7 +39,7 @@ export const HeroScreen = ({history}) => {
             </div>
             <div className='col-8'>
                 <h3 className='h3'>{superhero}</h3>
-            <ul  class="list-group list-group-flush">
+            <ul  className="list-group list-group-flush">
                 <li className='list-group-item border-0'><b>Alter ego: </b> {alter_ego}</li>
                 <li className='list-group-item border-0'><b>Publisher: </b> {publisher}</li>
                 <li className='list-group-item border-0'><b>First_appearance: </b> {first_appearance}</li>
@@ -48,7 +47,7 @@ export const HeroScreen = ({history}) => {
 
             <h5>Characters</h5>
             <p>{characters}</p>
-            <button type="button" class="btn btn-outline-primary" onClick={handleReturn}>return</button>
+            <button type="button" className="btn btn-outline-primary" onClick={handleReturn}>return</button>
             </div>
         </div>
     )

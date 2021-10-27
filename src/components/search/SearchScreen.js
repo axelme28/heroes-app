@@ -28,11 +28,12 @@ export const SearchScreen = ({history}) => {
 
     return (
         <div>
-            <h1>SearchScreen</h1>
-            <br/>
+            <div className='d-flex align-content-center justify-content-center m-3'>
+                <h1>Search a hero</h1>
+            </div>
 
             <div className='row'>
-                <div className='col-5'>
+                <div className='col-4 d-flex align-content-around '>
                     <form onSubmit={handleSearch}>
                         <input
                             type= 'text'
@@ -43,16 +44,16 @@ export const SearchScreen = ({history}) => {
                             value={searchText}
                             onChange={handleInputChange}
                         />
+                        <button type="button" className="btn btn-primary mt-3 align-content-center">Search</button>
 
-                        <button
-                            type='submit'
-                            className='btn btn-primary m-1 btn-block'
-                        >
-                            Search
-                        </button>
+                        
                     </form>
+                    
+
                 </div>
-                <div className='col-7'>´
+
+                
+                <div className='col-7'>
                     <h4>Results</h4>
                     {(q === '')&&<div className='alert alert-primary'>Search a hero</div>}
                     {(q !== '' && heroesFilter.length === 0)

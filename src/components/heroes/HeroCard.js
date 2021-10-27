@@ -8,7 +8,7 @@ export const HeroCard = ({
     first_appearance,
     characters,}) => {
     return (
-        <div className = "card ms-3 border-0 shadow rounded animate__animated animate__flipInX" style = {{maxWidth: 540}}>
+        <div className = "card ms-3 border-0 shadow rounded animate__animated animate__flipInX mt-3" style = {{maxWidth: 540}}>
             <div className = "row no-gutters">
                 <div className = "col-md-4">
                     <img src = {`./assets/heroes/${id}.jpg`} className = "card-img animate__animated animate__backInLeft" alt = {superhero}/>
